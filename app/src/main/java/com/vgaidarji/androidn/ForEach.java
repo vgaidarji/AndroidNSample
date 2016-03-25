@@ -8,14 +8,21 @@ import java.util.ArrayList;
  */
 public class ForEach {
     void initObjects() {
-        ArrayList<Person> s1 = new ArrayList<>(5);
-        s1.add(new Person());
-        s1.add(new Person());
-        s1.add(new Person());
-        s1.add(new Person());
-        s1.add(new Person());
+        ArrayList<Person> persons = new ArrayList<>(5);
+        persons.add(new Person());
+        persons.add(new Person());
+        persons.add(new Person());
+        persons.add(new Person());
+        persons.add(new Person());
 
-        s1.forEach(p -> p.name = "New Person");
-        s1.forEach(person -> Log.d("ForEach", person.name));
+        // old
+        for(Person p : persons) {
+            p.name = "New Person";
+            Log.d("ForEach", p.name);
+        }
+
+        // new
+        persons.forEach(p -> p.name = "New Person");
+        persons.forEach(person -> Log.d("ForEach", person.name));
     }
 }
