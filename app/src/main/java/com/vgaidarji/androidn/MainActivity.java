@@ -16,8 +16,7 @@ public class MainActivity extends AppCompatActivity {
         new Lambdas().doWork();
 
         findViewById(R.id.buttonPIP).setOnClickListener(view -> {
-            // activity Multi-window mode in "Developer options"
-            // "Force activities to be resizable"
+            // only for TV
             MainActivity.this.enterPictureInPicture();
         });
     }
