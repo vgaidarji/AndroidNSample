@@ -7,6 +7,14 @@ import android.util.Log;
  */
 public class RepeatableAnnotations {
 
+    @Schedules ({
+        @Schedule(dayOfMonth = "first"),
+        @Schedule(dayOfWeek = "Monday"),
+        @Schedule(dayOfWeek = "Saturday", hour = 22)
+    })
+    private class MeetingPriorToJava8 {
+    }
+
     @Schedule(dayOfMonth = "first")
     @Schedule(dayOfWeek = "Monday")
     @Schedule(dayOfWeek = "Saturday", hour = 22)
